@@ -33,7 +33,7 @@
              var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
      
              var renderer = new THREE.WebGLRenderer({antialias: true});
-             renderer.setClearColor("#e5e5e5");
+             renderer.setClearColor("#e5e5e5"); //replace with 000000 if you want black. the black being rendered as per this color was a later step
              renderer.setSize( window.innerWidth, window.innerHeight );
             document.body.appendChild( renderer.domElement );
      
@@ -44,7 +44,7 @@
      
                  camera.updateProjectionMatrix();
              })
-             renderer.render(scene,camera);
+             renderer.render(scene,camera);//gotta have this to properly render the actual scene. this is what was needed to make the BG color work right.
 
          </script>
     <div>
